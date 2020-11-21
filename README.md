@@ -1,8 +1,12 @@
 # 2020-11-install-opence
 
+The instructions document what I had to do to get Open-CE up and running in my environment.  I did this on a Power8 / Minsky server with Cuda 10.2 in Nov 2020.  The main instructions for installing the Open-CE package are found here ->
 
 [github repo]:
 git clone https://github.com/open-ce/open-ce
+
+[youtube video]:
+https://youtu.be/--bREvi9LqY
 
 Lets try a docker build!
 

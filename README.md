@@ -1,5 +1,12 @@
-# 2020-11-install-opence
-Open-CE is a project that helps you build deep learning frameworks on IBM Power platforms.  Whenever you need to run PyTorch or Tensorflow, using these build tools are highly recommended.
+# 2020-11-install-opence-fastai
+Open-CE is a project that helps you build deep learning frameworks on IBM Power platforms.  Whenever you need to run PyTorch or Tensorflow, using these build tools are highly recommended.  For a lot of the projects I work on, i like to use fastAI.  I have also included the instructions to add this package to your python environment.  
+
+The steps are as follows
+
+1. build python deep learning packages
+2. setup a new conda environment
+3. install packages into conda environment
+4. customize environment with additional packages.
 
 The instructions document what I had to do to get Open-CE up and running in my environment.  I did this on a Power8 / Minsky server with Cuda 10.2 in Nov 2020.  The main instructions for installing the Open-CE package are found here ->
 

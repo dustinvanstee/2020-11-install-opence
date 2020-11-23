@@ -58,11 +58,14 @@ conda install conda-build
 
 
 # Build All
+```
 python open-ce/build_env.py --python_versions 3.6 --build_types cuda  envs/opence-env.yaml --docker_build | tee opence.py36.log  
+```
 
-# Build Pytorch
-python open-ce/build_env.py --python_versions 3.7 --build_types cuda  open-ce/envs/pytorch-env.yaml --docker_build &> opence.py36.log  
-python open-ce/build_env.py  --build_types cuda  open-ce/envs/pytorch-env.yaml --docker_build &> opence.py36.log  # works
+# Build Only Pytorch
+```
+python open-ce/build_env.py --python_versions 3.6 --build_types cuda  open-ce/envs/pytorch-env.yaml --docker_build &> opence.py36.log  
+```
 
 # Create Conda Environment for Pytorch 1.6!
 ```

@@ -11,33 +11,23 @@ The steps are as follows
 The instructions document what I had to do to get Open-CE up and running in my environment.  I did this on a Power8 / Minsky server with Cuda 10.2 in Nov 2020.  The main instructions for installing the Open-CE package are found here ->
 
 # Additional links / content
-[open-ce github repo](https://github.com/open-ce/open-ce):<br>
-```git clone https://github.com/open-ce/open-ce```
+Here is a youtube video I created for this ..
+[youtube video](https://youtu.be/--bREvi9LqY)
 
-[youtube video]:
-https://youtu.be/--bREvi9LqY
 
 # Prequisites
 * Docker
 There are a couple of ways to build the software.  The most reliable method I found was to use the repository's --docker_build flag.  Using this flag allows you to reduce the number of dependencies required to have a clean build.  In the end, you will be left with a directory named condabuild from which you can install all the software.
+# Install Docker Prerequisite
+```yum install docker```
+```service docker start```
+# fix /var/run/docker* permissions
+```chown vanstee:docker ...```
 
 * Anaconda
 All packages are pretty much based on the anaconda python distribution.  You will need to have anaconda installed prior to running these tools.
-
----
-# Create Conda Environment to build software
-I just used a seperate conda environment to build this software just in case there were any dependencies I needed
-conda create -n opence-build python=3.7
-conda install conda-build
-
-# Install Anaconda
 https://docs.anaconda.com/anaconda/install/linux-power8/#
 
-# Install Docker Prerequisite
-yum install docker
-service docker start
-# fix /var/run/docker* permissions
-chown vanstee:docker ...
 
 # Grab TensorRT dependency
 https://developer.nvidia.com/nvidia-tensorrt-7x-download
@@ -46,6 +36,20 @@ TensorRT-7.0.0.11.CentOS-7.6.ppc64le-gnu.cuda-10.2.cudnn7.6.tar.gz
 cd /gpfs/home/s4s004/vanstee/2020-09-opence/techu/open-ce
 mkdir local_files
 cp ../../TensorRT-7.* local_files/
+
+
+---
+# Clone Open-CE repo 
+download open-ce repo to a directory on your machine
+[open-ce github repo](https://github.com/open-ce/open-ce):<br>
+```git clone https://github.com/open-ce/open-ce```
+
+# Create Conda Environment to build software
+I just used a seperate conda environment to build this software just in case there were any dependencies I needed.  This conda env needs the conda-build package, add this to the environment
+conda create -n opence-build python=3.7
+conda activate opence-build
+conda install conda-build
+
 
 
 # Build All

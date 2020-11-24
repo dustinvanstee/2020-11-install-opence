@@ -8,7 +8,7 @@ The steps are as follows
 3. install packages into conda environment
 4. customize environment with additional packages.
 
-The instructions document what I had to do to get Open-CE up and running in my environment.  I did this on a Power8 / Minsky server with Cuda 10.2 in Nov 2020.  The main instructions for installing the Open-CE package are found here ->
+The instructions document what I had to do to get Open-CE up and running in my environment.  I did this on a Power8 / Minsky server with Cuda 10.2 in Nov 2020.  The main instructions for installing the Open-CE package are found here -> [open-ce](https://github.com/open-ce/open-ce)
 
 # Additional links / content
 Here is a youtube video I created for this ..
